@@ -1,0 +1,28 @@
+Program signal_filter
+//Program that tell the user if a signal pass the filtering that uses the Gaussian Probability Density Function or if its blocked by it.
+
+Start
+	
+	Declare Integer x
+	Constant Real AVG = 1000
+	Constant Real DEV = 300
+	Declare Real i = 0 
+	Declare Real fdp = 0
+	Constant Real PI = 3.14
+
+	Display "Ingresa la señal de entrada en Hz" 
+	Input x
+
+	For i to (x+1)
+		Set fdp = fdp + 1/(DEV\((2*PI )^1/2))*e^((-1/2)*((x-AVG)/(DEV))^2
+
+	If fdp > 0.3
+		Display "La señal pasa el filtro
+	Else
+		Diaplay "La señal es bloqueada por el filtro
+	End If
+	
+Stop
+	
+	
+		

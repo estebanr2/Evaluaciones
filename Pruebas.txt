@@ -1,0 +1,84 @@
+Prueba 1
+
+Iniciar signal_filter
+x,AVG = 1000, DEV = 300, PI = 3.14, E = 2.718 fdp = 0
+
+El usuario ingresa 0
+x = 0
+
+Se inicia el ciclo for con i =0
+Se calcula fdp = (1/300*(2*PI)^1/2)*E^(-1/2*(((0-1000)/1000)^2)
+	fdp = 5.14092998*10^-6
+i= 0+1
+
+Termina el ciclo
+
+Condicional
+
+Es fdp mayor que 0.3?
+	No
+
+La señal no pasa el filtro
+
+
+Prueba 2
+
+Iniciar signal_filter
+x,AVG = 1000, DEV = 300, PI = 3.14, E = 2.718 fdp = 0
+
+El usuario ingresa 3
+x = 0
+
+Se inicia el ciclo 
+Iteracion 1 i = 0
+Se calcula fdp = (1/300*(2*PI)^1/2)*E^(-1/2*(((0-1000)/1000)^2) + 0
+	fdp = 5.14092998*10^-6
+ 
+Iteracion 2
+i= 1
+
+Se calcula fdp = (1/300*(2*PI)^1/2)*E^(-1/2*(((1-1000)/1000)^2) + 5.14092998*10^-6 
+	fdp = 1.0339271*10^-5
+
+Iteracion 3
+i= 2
+
+Se calcula fdp = (1/300*(2*PI)^1/2)*E^(-1/2*(((2-1000)/1000)^2) + 1.0339271*10^-5 
+	fdp = 2.09105225*105
+
+Termina el ciclo
+
+Condicional
+
+Es fdp mayor que 0.3?
+	No
+
+La señal no pasa el filtro
+
+
+Prueba 4
+
+Iniciar signal_filter
+x,AVG = 1000, DEV = 300, PI = 3.14, E = 2.718 fdp = 0
+
+El usuario ingresa 900
+x = 900
+
+Se inicia el ciclo for con i =0 hasta i = 900
+Se calcula fdp = (1/300*(2*PI)^1/2)*E^(-1/2*(((0-1000)/1000)^2) + (1/300*(2*PI)^1/2)*E^(-1/2*(((1-1000)/1000)^2)+ ... (1/300*(2*PI)^1/2)*E^(-1/2*(((900-1000)/1000)^2)
+	fdp = 0.3696439340759694
+
+Termina el ciclo
+
+Condicional
+
+Es fdp mayor que 0.3?
+	Si
+
+La señal pasa el filtro
+
+
+¿para qué valor de frecuencia la señal deja de ser bloqueada?
+	La frecuencia deja de ser bloqueada a partir de 843 Hz, donde la probabilidad acumulada es igual a 	0.30052463985682765, y es mayor a 0,3
+
+

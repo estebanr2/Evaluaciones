@@ -1,0 +1,32 @@
+Problema: Determinar si una señal es bloqueada por un filtro que usa la funcion de densidad de probabilidad de la campana de Gauss
+
+La densidad de probabilidad de la campana de gauss esta determinada por la funcion 
+ 
+	𝑓(𝑥)=(1/𝜎√2𝜋)*𝑒^(−1/2)*(𝑥−𝜇/𝜎)^2)
+	
+	Donde x es la frecuencia que ingresa el usuario 𝜇 la media y 𝜎 la desviacion
+
+Para determinar si la señal pasa el filtro, se utiliza la probabilidad acumulada, que se obtiene sumando la funcion de densidad de probabilidad para las frecuencias desde 0 hasta la frecuencia de señal que ingresó el usuario.
+
+Si la probabilidad acumulada es mayor al 30 %, la señal pasa el filtro, sino es bloqueada
+
+Para el ejercicio se tomara como media 1000 Hz y como desviación 300 Hz
+
+Variables
+
+x  (frecuencia de entrada)
+dfp (densidad de densidad de probabilidad)
+
+Constantes
+
+AVG(media) = 1000
+DEV (desviacion) = 300
+
+* Se debe usar un ciclo para sumar los valores de fdp, con un contador que inicie desde 0 hasta la frecuencia de entrada, que se ejecute hasta que el contador sea igual a la frecuencia de entrada + 1 (ya que el contador inicia desde 0)
+
+* Calcular la fdp usando reemplazando x por i, ya que el contador incrementara en 1  por cada iteracion hasta la frecuencia de entrada, como indica la probabilidad acumulada, y con cada iteracion se suma a la misma variable fdp, el resultado de la iteracion anterior
+
+*Cuando se termine el ciclo, se coloca un condicional, en el que si dfp es mayor que 0.3(30%), se muestra un mensaje indicando que la señal pasa el filtro, si no es mayor, el mensaje dira que la señal sera bloqueada por el filtro
+
+
+
